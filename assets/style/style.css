@@ -5,3 +5,11 @@
     background-color: black;
     height: 45px;
 }
+
+
+#toggle-generos {
+  color: black !important;
+}
+#toggle-generos:hover {
+  color: #444 !important; /* gris oscuro al pasar el mouse */
+}
