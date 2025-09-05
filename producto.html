@@ -4,35 +4,115 @@
   <meta charset="utf-8" />
   <title>Detalle del producto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap Para maquetar -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="icon" type="image/png" href="assets/img/logo_tienda.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 </head>
-<body class="container py-4">
+<body>
+  <div class="banner-logo">
+      <a class="navbar-brand d-none d-lg-block" href="index.html">
+        <img src="assets/img/logo_tienda.png" alt="Sekai no Manga" height="150px">
+      </a>
+    </div>  
+    <br>
+  <nav class="navbar navbar-expand-lg border-bottom">
+    <div class="container">
 
-  <nav class="mb-3">
-    <a href="index.html" class="btn btn-link">← Volver</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside">Género</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Shonen</a></li>
+              <li><a class="dropdown-item" href="#">Shoujo</a></li>
+              <li><a class="dropdown-item" href="#">Seinen</a></li>
+              <li><a class="dropdown-item" href="#">Spokon</a></li>
+              <li class="extra d-none"><a class="dropdown-item" href="#">Romance</a></li>
+              <li class="extra d-none"><a class="dropdown-item" href="#">Isekai</a></li>
+              <li class="extra d-none"><a class="dropdown-item" href="#">Ecchi</a></li>
+              <li class="extra d-none"><a class="dropdown-item" href="#">Gore</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item text-primary fw-bold" type="button" id="toggle-generos">Ver más</button></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" target="_blank" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" target="_blank" href="vendidos.html">¡Más vendidos!</a></li>
+        </ul>
+      </div>
+      
+      <a href="carro.html" class="position-relative" title="Ver carro">
+        <img src="assets/img/carrito-de-compras.png" alt="carro" style="height:24px;">
+      </a>
+
+    </div>
   </nav>
 
-  <div class="row g-4 align-items-start">
-    <div class="col-md-5">
-      <img id="p-img" class="img-fluid rounded" alt="">
-    </div>
-    <div class="col-md-7">
-      <h1 id="p-titulo" class="h3 mb-1"></h1>
-      <div id="p-editorial" class="text-muted mb-3"></div>
-      <div class="h4 mb-3" id="p-precio"></div>
-      <p id="p-desc" class="mb-4"></p>
+  <!-- Detalle de producto -->
+  <div class="container py-4">
+    <div class="row g-4 align-items-start">
+      <!-- Imagen -->
+      <div class="col-12 col-md-5">
+        <img id="p-img" class="img-fluid rounded w-100" src="https://via.placeholder.com/800x1000" alt="Portada del producto">
+      </div>
 
-      <button id="btnAdd" class="btn btn-dark btn-lg" type="button">COMPRAR</button>
+      <!-- Info -->
+      <div class="col-12 col-md-7">
+        <h1 id="p-titulo" class="h3 mb-1">Título del producto</h1>
+        <div id="p-editorial" class="text-muted mb-3">Editorial / Autor</div>
+
+        <div id="p-precio" class="h4 mb-3">$12.990</div>
+
+        <p id="p-desc" class="mb-4">
+          Breve descripción del producto. Incluye formato, páginas, idioma, etc.
+        </p>
+
+        <div class="d-grid d-sm-inline-flex gap-2">
+          <button id="btnAdd" class="btn btn-dark btn-lg" type="button">COMPRAR</button>
+          <a href="carro.html" class="btn btn-outline-secondary btn-lg">Ver carrito</a>
+        </div>
+      </div>
     </div>
+
+    <!-- Recomendados -->
+    <section class="mt-5">
+      <h3 class="h5">También de <span id="serieName">la misma serie</span></h3>
+
+      <div id="recs" class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3 mt-1">
+        <!-- Item 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <a href="producto.html?id=ej1" class="text-decoration-none">
+              <img src="https://via.placeholder.com/600" class="card-img-top" alt="Producto 1">
+            </a>
+            <div class="card-body p-2">
+              <h6 class="card-title mb-1 text-truncate">Producto 1</h6>
+              <div class="small text-muted">$11.990</div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 px-2 pb-2">
+              <button class="btn btn-sm btn-primary w-100 btn-add-cart"
+                      data-id="ej1" data-nombre="Producto 1" data-precio="11990">
+                Añadir
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repite/inyecta más .col con cards similares... -->
+      </div>
+    </section>
   </div>
 
-  <section class="mt-5">
-    <h3 class="h5">También de <span id="serieName"></span></h3>
-    <div id="recs" class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3"></div>
-  </section>
 
-  <!-- Script de la logica de clave valor de cada carta y id -->
-  <script src="assets/js/producto.js" defer></script>   <!-- Variable defer para que el html inicie todo antes de cargar el script-->
+  <script src="assets/js/producto.js" defer></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

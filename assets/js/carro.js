@@ -47,8 +47,8 @@ function upsertProducto(id, nombre, precio, qty) {
 
   if (id && qty > 0) {
     upsertProducto(id, nombre || 'Producto', precio > 0 ? precio : 0, qty);
-    saveCartToStorage(); // <-- NUEVO: si vino por query, lo persistimos también
-    // history.replaceState({}, '', location.pathname); // opcional
+    saveCartToStorage();
+  
   }
 })();
 

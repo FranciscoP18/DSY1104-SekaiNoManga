@@ -1,3 +1,22 @@
+// Toggle "Género" (sólo el menú actual)
+const tg = document.getElementById("toggle-generos");
+if (tg) {
+  tg.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Buscar SÓLO dentro del dropdown donde vive el botón
+    const menu = this.closest('.dropdown-menu');
+    if (!menu) return;
+
+    const extras = menu.querySelectorAll('.extra');
+    extras.forEach(el => el.classList.toggle('d-none'));
+
+    // Texto del botón
+    this.textContent = this.textContent.trim() === "Ver más" ? "Ver menos" : "Ver más";
+  });
+}
+
 // Captura clicks en "Añadir al carrito"
 document.addEventListener('click', function (e) {
   const btn = e.target.closest('.btn-add-cart');
@@ -35,18 +54,18 @@ document.addEventListener('click', function (e) {
   btn.classList.remove('btn-primary');
   btn.classList.add('btn-success', 'disabled');
   btn.setAttribute('aria-disabled', 'true');
-  btn.textContent = 'Agregado ✔';
+  btn.textContent = 'Agregado :3';
 
-  // 2) Mostrar cuadrito con link (ahora puede ir sin querystring)
-  const contenedor = btn.closest('.card-body') || btn.parentElement;
-  if (contenedor && !contenedor.querySelector('.added-alert')) {
-    const box = document.createElement('div');
-    box.className = 'added-alert alert alert-success mt-2 py-2 px-3';
-    box.innerHTML = `
-      <div class="d-flex align-items-center justify-content-between">
-        <span class="me-3">Agregado al carrito</span>
-        <a href="carro.html" class="btn btn-sm btn-outline-success">Ir al carrito</a>
-      </div>`;
-    contenedor.appendChild(box);
-  }
+  // // 2) Mostrar cuadrito con link (ahora puede ir sin querystring)
+  // const contenedor = btn.closest('.card-body') || btn.parentElement;
+  // if (contenedor && !contenedor.querySelector('.added-alert')) {
+  //   const box = document.createElement('div');
+  //   box.className = 'added-alert alert alert-success mt-2 py-2 px-3';
+  //   box.innerHTML = `
+  //     <div class="d-flex align-items-center justify-content-between">
+  //       <span class="me-3">Agregado al carrito</span>
+  //       <a href="carro.html" class="btn btn-sm btn-outline-success">Ir al carrito</a>
+  //     </div>`;
+  //   contenedor.appendChild(box);
+  // }
 });

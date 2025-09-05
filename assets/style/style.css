@@ -1,21 +1,36 @@
-.banner-logo {
-    font-family: 'Inter';
-    text-align: center;
-    color: white;
-    height: 150px;
-    background-image: url('https://i.pinimg.com/originals/fd/89/5d/fd895dc6bbe86bf63af5280711143c5d.gif');
-    background-position: 30px;
-    background-position: center;
+body {
+  font-family: 'Inter', 'Open Sans';
 }
 
-body {
+.banner-logo {
   font-family: 'Inter';
+  text-align: center;
+  background-image: url('https://i.pinimg.com/originals/fd/89/5d/fd895dc6bbe86bf63af5280711143c5d.gif');
+  background-position: center;
+}
+
+.banner-envio {
+  font-family: 'Inter', 'Open Sans';
+  text-align: center;
+  background-color: rgb(225, 152, 240);
+  width: 100%; /* O el ancho que desees */
+  overflow: hidden; /* Oculta el texto que se sale del contenedor */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 #toggle-generos {
-  color: black !important;
+  color: black;
 }
 #toggle-generos:hover {
-  color: #444 !important; /* gris oscuro al pasar el mouse */
+  color: #444 ; /* gris oscuro al pasar el mouse */
 }
 
+#btnPagar:hover {
+  color: white;
+  background-color: green;
+}
+
+.btn-remove:hover {
+  color: white;
+  background-color: red;
+}

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'dandadan1',
       serie: 'DanDaDan',
       volumen: 1,
-      titulo: 'DanDaDan Volumen 1 ',
+      titulo: 'DanDaDan Volumen 1',
       editorial: 'IVREA',
       precio: 12000,
       img: 'https://images.cdn3.buscalibre.com/fit-in/360x360/24/67/2467b765276184f142d032247eefd135.jpg',
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'dandadan2',
       serie: 'DanDaDan',
       volumen: 2,
-      titulo: 'Volumen 2',
+      titulo: 'DanDaDan Volumen 2',
       editorial: 'IVREA',
       precio: 12000,
       img: 'https://images.cdn1.buscalibre.com/fit-in/360x360/53/fe/53fe290ddec10360ae17dacf1d341a14.jpg',
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'dandadan3',
       serie: 'DanDaDan',
       volumen: 3,
-      titulo: 'Volumen 3',
+      titulo: 'DanDaDan Volumen 3',
       editorial: 'IVREA',
       precio: 12000,
       img: 'https://images.cdn3.buscalibre.com/fit-in/360x360/50/5a/505afa5847c3ad9837b0e7a33d57b908.jpg',
@@ -63,6 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
       precio: 30000,
       img: 'https://images.cdn2.buscalibre.com/fit-in/360x360/7a/a7/7aa787eee3737e39b6de4a6eee0ffe29.jpg',
       desc: 'Recetario oficial inspirado en One Piece, por el chef de los Sombrero de Paja.'
+    },
+    {
+      id: 'bluelock',
+      serie: 'Blue Lock',
+      volumen: 1,
+      titulo: 'Blue Lock Vol 1',
+      editorial: 'IVREA',
+      precio: 12000,
+      img: 'https://cdnx.jumpseller.com/neotokyo3-store/image/20853262/resize/610/610?1647613258',
+      desc: 'Mezclando dos temáticas super populares como son el fútbol y el battle royale, los autores cuentan una historia llena de intriga, emoción y acción que busca cautivar tanto a los fans del futbol como a todo lector que busque una historia atraparte y diferente. Tras quedar eliminados de la copa del mundo de 2018 y sintiendo que la capacidad de sus jugadores ha llegado a un límite, las autoridades de la Asociación de Fútbol Japonesa están dispuestas a todo para lograr conseguir lo que, ellos creen, es lo único que necesitan para poder competir en igualdad de condiciones contra las selecciones más poderosas del planeta: un delantero estrella. Así, ponen en marcha el proyecto Blue Lock, un centro de capacitación donde someterán a un gran número de adolescentes con potencial para el deporte a un riguroso y extremo entrenamiento que los llevará a pelear por convertirse en el mejor delantero del mundo, aún poniendo en riesgos sus propias carreras.'
     }
   ];
 
@@ -83,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const p = BY_ID[id];
   if (!p) {
     document.body.insertAdjacentHTML('beforeend',
-      '<div class="alert alert-warning mt-3">Producto no encontrado.</div>');
+      '<div class="alert alert-danger" role = "alert">Producto no encontrado.</div>');
     return;
   }
 
