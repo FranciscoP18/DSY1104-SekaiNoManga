@@ -6,8 +6,25 @@ let envioCLP = 0;
 let descuentoCLP = 0;
 let cuponAplicado = '';
 
-
 const CLPFormatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
+
+// --- NUEVO: storage simple ---
+const CART_KEY = 'carrito_sekai';
+function loadCartFromStorage() {
+  try {
+    const arr = JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    for (const it of arr) {
+      upsertProducto(it.id, it.nombre || 'Producto', Number(it.precio) || 0, Number(it.qty) || 0);
+    }
+  } catch { /* noop */ }
+}
+function saveCartToStorage() {
+  const arr = productos
+    .filter(p => (p.qty || 0) > 0)
+    .map(p => ({ id: p.id, nombre: p.nombre, precio: p.precio, qty: p.qty }));
+  localStorage.setItem(CART_KEY, JSON.stringify(arr));
+}
+// -----------------------------
 
 function upsertProducto(id, nombre, precio, qty) {
   const i = productos.findIndex(p => p.id === id);
@@ -20,6 +37,7 @@ function upsertProducto(id, nombre, precio, qty) {
   }
 }
 
+// Compatibilidad con tu querystring (por si aún llegas con ?id=...):
 (function initFromQuery() {
   const qs = new URLSearchParams(window.location.search);
   const id = qs.get('id');
@@ -29,6 +47,8 @@ function upsertProducto(id, nombre, precio, qty) {
 
   if (id && qty > 0) {
     upsertProducto(id, nombre || 'Producto', precio > 0 ? precio : 0, qty);
+    saveCartToStorage(); // <-- NUEVO: si vino por query, lo persistimos también
+    // history.replaceState({}, '', location.pathname); // opcional
   }
 })();
 
@@ -51,7 +71,6 @@ function renderTabla() {
     </tr>
   `).join('');
 
-
   document.querySelectorAll('.qty').forEach(function(inp){
     inp.addEventListener('input', function(){
       const id  = this.getAttribute('data-id');
@@ -60,15 +79,16 @@ function renderTabla() {
       prod.qty   = Math.max(0, val);
       const celda = document.querySelector('.subtotal[data-id="'+id+'"]');
       celda.textContent = CLPFormatter.format(prod.precio * prod.qty);
+      saveCartToStorage(); // <-- NUEVO
       recalc();
     });
   });
-
 
   document.querySelectorAll('.btn-remove').forEach(function(btn){
     btn.addEventListener('click', function(){
       const id = this.getAttribute('data-id');
       productos = productos.filter(function(p){ return p.id !== id; });
+      saveCartToStorage(); // <-- NUEVO
       renderTabla();
       recalc();
     });
@@ -90,7 +110,6 @@ function recalc() {
   document.getElementById('lblDescuento').textContent = '-' + CLPFormatter.format(descuentoCLP);
   document.getElementById('lblTotal').textContent     = CLPFormatter.format(Math.max(0, total));
 }
-
 
 document.getElementById('btnEnvio').addEventListener('click', function(){
   const region = document.getElementById('region').value;
@@ -120,6 +139,10 @@ document.getElementById('btnPagar').addEventListener('click', function(){
   alert('Pago simulado.\nTotal a pagar: ' + document.getElementById('lblTotal').textContent);
 });
 
+// --- Inicialización ---
+// 1) Cargar todo lo que haya en localStorage (NUEVO)
+loadCartFromStorage();
 
+// 2) Pintar y calcular
 renderTabla();
 recalc();

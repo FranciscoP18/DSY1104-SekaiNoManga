@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Detalle del producto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap Para maquetar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+
+  <nav class="mb-3">
+    <a href="index.html" class="btn btn-link">← Volver</a>
+  </nav>
+
+  <div class="row g-4 align-items-start">
+    <div class="col-md-5">
+      <img id="p-img" class="img-fluid rounded" alt="">
+    </div>
+    <div class="col-md-7">
+      <h1 id="p-titulo" class="h3 mb-1"></h1>
+      <div id="p-editorial" class="text-muted mb-3"></div>
+      <div class="h4 mb-3" id="p-precio"></div>
+      <p id="p-desc" class="mb-4"></p>
+
+      <button id="btnAdd" class="btn btn-dark btn-lg" type="button">COMPRAR</button>
+    </div>
+  </div>
+
+  <section class="mt-5">
+    <h3 class="h5">También de <span id="serieName"></span></h3>
+    <div id="recs" class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3"></div>
+  </section>
+
+  <!-- Script de la logica de clave valor de cada carta y id -->
+  <script src="assets/js/producto.js" defer></script>   <!-- Variable defer para que el html inicie todo antes de cargar el script-->
+</body>
+</html>
