@@ -1,9 +1,6 @@
-let productos = [
-  { id: 'onepiece1', nombre: 'ONE PIECE #1',   precio: 6990, qty: 0 }
-];
+let productos = [];
 
 const cupones = { 'LANZAMIENTO10': 0.10, 'SEKAI15': 0.15 };
-
 
 let envioCLP = 0;
 let descuentoCLP = 0;
@@ -12,13 +9,35 @@ let cuponAplicado = '';
 
 const CLPFormatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
 
+function upsertProducto(id, nombre, precio, qty) {
+  const i = productos.findIndex(p => p.id === id);
+  if (i >= 0) {
+    productos[i].nombre = nombre || productos[i].nombre;
+    productos[i].precio = precio || productos[i].precio;
+    productos[i].qty = (productos[i].qty || 0) + qty;
+  } else {
+    productos.push({ id, nombre, precio, qty });
+  }
+}
+
+(function initFromQuery() {
+  const qs = new URLSearchParams(window.location.search);
+  const id = qs.get('id');
+  const nombre = qs.get('nombre');
+  const precio = parseInt(qs.get('precio') || '0', 10);
+  const qty = parseInt(qs.get('qty') || '0', 10);
+
+  if (id && qty > 0) {
+    upsertProducto(id, nombre || 'Producto', precio > 0 ? precio : 0, qty);
+  }
+})();
+
 function costoEnvio(region, comuna) {
   if (region === 'Aysén') return 8000;
   if (region === 'Valparaíso') return 5000;
   if (region === 'Region_metropolitana') return (comuna === 'periferia' ? 4000 : 3000);
   return 6000;
 }
-
 
 function renderTabla() {
   const tbody = document.getElementById('tbody-productos');
@@ -55,7 +74,6 @@ function renderTabla() {
     });
   });
 }
-
 
 function subtotalCarrito() {
   return productos.reduce(function(acc, p){ return acc + (p.precio * p.qty); }, 0);

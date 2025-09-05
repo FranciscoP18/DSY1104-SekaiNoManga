@@ -1,15 +1,15 @@
-.text-info {
+.banner-logo {
     font-family: 'Inter';
     text-align: center;
     color: white;
-    height: 50px;
-    background-image: url('https://wallpapers.com/images/featured/monkey-d-luffy-0cp6bwz93q5udc63.jpg');
+    height: 150px;
+    background-image: url('https://i.pinimg.com/originals/fd/89/5d/fd895dc6bbe86bf63af5280711143c5d.gif');
+    background-position: 30px;
     background-position: center;
 }
 
-.img-text {
-  width: 85px;
-  height: 100px;
+body {
+  font-family: 'Inter';
 }
 
 #toggle-generos {
