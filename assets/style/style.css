@@ -2,8 +2,9 @@
     font-family: 'Inter';
     text-align: center;
     color: white;
-    background-color: black;
-    height: 45px;
+    background-color: transparent;
+    height: 60px;
+    background-image: url('https://i.blogs.es/732959/casa-kame-de-dragon-ball_3840x2160_xtrafondos.com/500_333.jpeg');
 }
 
 
@@ -13,3 +14,4 @@
 #toggle-generos:hover {
   color: #444 !important; /* gris oscuro al pasar el mouse */
 }
+
