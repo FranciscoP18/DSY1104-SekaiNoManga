@@ -2,11 +2,15 @@
     font-family: 'Inter';
     text-align: center;
     color: white;
-    background-color: transparent;
-    height: 60px;
-    background-image: url('https://i.blogs.es/732959/casa-kame-de-dragon-ball_3840x2160_xtrafondos.com/500_333.jpeg');
+    height: 50px;
+    background-image: url('https://wallpapers.com/images/featured/monkey-d-luffy-0cp6bwz93q5udc63.jpg');
+    background-position: center;
 }
 
+.img-text {
+  width: 85px;
+  height: 100px;
+}
 
 #toggle-generos {
   color: black !important;

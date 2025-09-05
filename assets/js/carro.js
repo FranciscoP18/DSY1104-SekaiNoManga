@@ -13,13 +13,9 @@ let cuponAplicado = '';
 const CLPFormatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
 
 function costoEnvio(region, comuna) {
-  if (region === 'Aysén') 
-    return 8000;
-  if (region === 'Valparaíso') 
-    return 5000;
-  if (region === 'Region_metropolitana') 
-    return (comuna === 'periferia' ? 4000 : 3000);
-
+  if (region === 'Aysén') return 8000;
+  if (region === 'Valparaíso') return 5000;
+  if (region === 'Region_metropolitana') return (comuna === 'periferia' ? 4000 : 3000);
   return 6000;
 }
 
