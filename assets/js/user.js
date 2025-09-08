@@ -2,8 +2,6 @@ function login(){
   var email = document.getElementById('email').value.trim();
   var contra = document.getElementById('contrasena').value.trim();
 
-  
-  //  Validar correo básico: algo@dominio.tld
   if (email === '') {
     alert('Ingrese su correo');
     return;
@@ -22,4 +20,5 @@ function login(){
 
   
   alert('Sesión correcta. ¡Bienvenido, cliente!');
+  window.location.href = 'index.html';
 }

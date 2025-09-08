@@ -1,9 +1,8 @@
 
 var CLPFormatter = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' });
 
-
 const CUPON_CODE = 'SEKAI15';   
-const CUPON_PCT  = 0.15;       
+const CUPON_PCT  = 0.15;    
 var cuponAplicado = '';       
 
 
@@ -145,6 +144,7 @@ if (btnPagar) {
   btnPagar.onclick = function () {
     var totalTxt = (document.getElementById('lblTotal') || {}).innerText || '$0';
     alert('Pago simulado.\nTotal a pagar: ' + totalTxt);
+    window.location.href = 'index.html';
   };
 }
 
