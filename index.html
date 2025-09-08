@@ -9,14 +9,15 @@
   <link rel="icon" type="image/png" href="assets/img/logo_tienda.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    
     <div class="banner-envio">
       <a class="navbar-brand d-none d-lg-block" href="index.html">
-        <h1 class="texto-animado">                            🛻 ¡ENVIO GRATIS A TODO CHILE! 🛻   </h1>
+        <h1 class="texto-animado">                            🛻 ¡ENVIO  A TODO CHILE! 🛻   </h1>
       </a>
     </div>  
     <div class="banner-logo">
@@ -25,6 +26,7 @@
       </a>
     </div>  
     <br>
+
   <nav class="navbar navbar-expand-lg border-bottom">
     <div class="container">
 
@@ -35,27 +37,16 @@
       <div class="collapse navbar-collapse justify-content-center" id="mainNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              data-bs-auto-close="outside">Género</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Shonen</a></li>
-              <li><a class="dropdown-item" href="#">Shoujo</a></li>
-              <li><a class="dropdown-item" href="#">Seinen</a></li>
-              <li><a class="dropdown-item" href="#">Spokon</a></li>
-              <li class="extra d-none"><a class="dropdown-item" href="#">Romance</a></li>
-              <li class="extra d-none"><a class="dropdown-item" href="#">Isekai</a></li>
-              <li class="extra d-none"><a class="dropdown-item" href="#">Ecchi</a></li>
-              <li class="extra d-none"><a class="dropdown-item" href="#">Gore</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><button class="dropdown-item text-primary fw-bold" type="button" id="toggle-generos">Ver más</button></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" target="_blank" href="ofertas.html">Ofertas</a></li>
-          <li class="nav-item"><a class="nav-link" target="_blank" href="vendidos.html">¡Más vendidos!</a></li>
+          <li class="nav-item"><a class="nav-link"  href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link"  href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link"  href="vendidos.html">¡Más vendidos!</a></li>
         </ul>
       </div>
       
+      <a href="usuario.html" class="position-relative1" title="Usuarios">
+        <img src="assets/img/login-user.png" alt="user" style="height:24px;">
+      </a>
+    
       <a href="carro.html" class="position-relative" title="Ver carro">
         <img src="assets/img/carrito-de-compras.png" alt="carro" style="height:24px;">
       </a>
@@ -64,74 +55,138 @@
   </nav>
 
   <br>
+  <h1 class="txtHome">Inicio 🏠</h1>
 
-  <div class="container my-4">
-    <div class="d-flex flex-wrap gap-3">
-      
-      <div class="card h-100 position-relative" style="width: 18rem;">
-        <!-- <a href="producto.html?id=dandadan1" class="d-block" aria-label="Ver DanDaDan 1"> -->
-          <img
-            src="https://cdnx.jumpseller.com/neotokyo3-store/image/28546049/resize/610/610?1666319620"
-            class="card-img-top"
-            alt="DanDaDan 1">
-        <!-- </a> -->
-          <div class="card-body">
-            <h5 class="card-title">
-              <a class="text-decoration-none">Dan Da Dan</a>
-            </h5>
-            <a
-              href="#"
-              class="btn btn-primary btn-add-cart"
-              data-id="dandadan1"
-              data-nombre="DanDaDan 1"
-              data-precio="12000">Añadir al carrito
-            </a>
-          </div>
-        </div>
+ <main class="container my-4 catalog-grid">
 
-        <div class="card h-100 position-relative" style="width: 18rem;">
-          <a href="producto.html?id=onepiecesanji" class="d-block" aria-label="Ver One Piece: Las Recetas de Sanji">
-            <img
-              src="https://cdnx.jumpseller.com/neotokyo3-store/image/37582199/resize/240/240?1689364061"
-              class="card-img-top"
-              alt="One Piece: Las Recetas de Sanji">
+   <div class="container my-4">
+     <div class="d-flex flex-wrap gap-3">
+       <div class="card h-100 position-relative" style="width: 18rem;">
+         <!-- <a href="producto.html?id=dandadan1" class="d-block" aria-label="Ver DanDaDan 1"> -->
+           <img
+             src="https://cdnx.jumpseller.com/neotokyo3-store/image/28546049/resize/610/610?1666319620"
+             class="card-img-top"
+             alt="DanDaDan 1">
+         <!-- </a> -->
+           <div class="card-body">
+             <h5 class="card-title">
+               <a class="text-decoration-none">Dan Da Dan</a>
+             </h5>
+             <a
+               href="#"
+               class="btn btn-primary btn-add-cart"
+               data-id="dandadan1"
+               data-nombre="DanDaDan 1"
+               data-precio="12000">Añadir al carrito
+             </a>
+           </div>
+         </div>
+ 
+         <div class="card h-100 position-relative" style="width: 18rem;" >
+             <img
+               src="https://cdnx.jumpseller.com/neotokyo3-store/image/37582199/resize/240/240?1689364061"
+               class="card-img-top"
+               alt="One Piece: Las Recetas de Sanji">
+           </a>
+           <div class="card-body">
+             <h5 class="card-title">
+               <a  class="text-decoration-none">One Piece: Las Recetas de Sanji</a>
+             </h5>
+             <a
+               href="#"
+               class="btn btn-primary btn-add-cart"
+               data-id="onepiecesanji"
+               data-nombre="One Piece: Las Recetas de Sanji"
+               data-precio="20000">Añadir al carrito
+             </a>
+           </div>
+         </div>
+          <!-- Blue Lock Vol. 1 -->
+         <div class="card h-100 position-relative" style="width: 18rem;">
+           <a class="d-block" aria-label="Ver Blue Lock Vol 1">
+             <img
+               src="https://cdnx.jumpseller.com/neotokyo3-store/image/20853262/resize/610/610?1647613258"
+               class="card-img-top"
+               alt="Blue Lock Vol 1">
+           </a>
+           <div class="card-body">
+             <h5 class="card-title">
+               <a class="text-decoration-none">Blue Lock Vol 1</a>
+             </h5>
+             <a
+               href="#"
+               class="btn btn-primary btn-add-cart"
+               data-id="bluelock"
+               data-nombre="Blue Lock Vol 1"
+               data-precio="12000">Añadir al carrito
+             </a>
+           </div>
+         </div>
+
+        <!-- Black Clover Vol. 1 -->
+         <div class="card h-100 position-relative" style="width: 18rem;">
+           <a class="d-block" aria-label="Ver Black Clover Vol 1">
+             <img
+               src="https://images.cdn1.buscalibre.com/fit-in/360x360/57/09/5709c55d53e066077117a8d6656b5e37.jpg"
+               class="card-img-top"
+               alt="Black Clover Vol 1">
+           </a>
+           <div class="card-body">
+             <h5 class="card-title">
+               <a class="text-decoration-none">Black Clover Vol 1</a>
+             </h5>
+             <a
+               href="#"
+               class="btn btn-primary btn-add-cart"
+               data-id="blacklover"
+               data-nombre="Black Clover Vol 1"
+               data-precio="18000">Añadir al carrito
+             </a>
+           </div>
+         </div>
+     </div>
+   </div>
+ </main>
+    
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
+      <p class="col-md-4 mb-0 text-body-secondary">© 2025 Sekai no Manga, SPA</p> 
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
+        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+          <img class ="bi me-2" src="assets/img/logo_tienda.png" alt="Logo tienda" width="60" height="100" aria-hidden="true">
+        </svg> 
+      </a> 
+      <ul class="nav col-md-4 justify-content-end"> 
+        <li class="nav-item">
+          <a href="index.html" class="nav-link px-2 text-body-secondary">Inicio</a>
+        </li> 
+        <li class="nav-item">
+          <a href="quienes.html" class="nav-link px-2 text-body-secondary">Quienes somos</a>
+        </li> 
+        <li class="nav-item">
+          <a href="terminos.html" class="nav-link px-2 text-body-secondary">Términos y Condiciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 text-body-secondary">Redes</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.instagram.com/" class="nav-link px-2 text-body-secondary">
+            <i class="fab fa-instagram"></i>
           </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="producto.html?id=onepiecesanji" class="text-decoration-none">One Piece: Las Recetas de Sanji</a>
-            </h5>
-            <a
-              href="#"
-              class="btn btn-primary btn-add-cart"
-              data-id="onepiecesanji"
-              data-nombre="One Piece: Las Recetas de Sanji"
-              data-precio="20000">Añadir al carrito
-            </a>
-          </div>
-        </div>
-
-        <div class="card h-100 position-relative" style="width: 18rem;">
-          <a href="producto.html?id=bluelock" class="d-block" aria-label="Ver Blue Lock Vol 1">
-            <img
-              src="https://cdnx.jumpseller.com/neotokyo3-store/image/20853262/resize/610/610?1647613258"
-              class="card-img-top"
-              alt="Blue Lock Vol 1">
+        </li> 
+        <li class="nav-item">
+          <a href="https://web.whatsapp.com/" class="nav-link px-2 text-body-secondary">
+            <i class="fab fa-whatsapp"></i>
           </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="producto.html?id=bluelock" class="text-decoration-none">Blue Lock Vol 1</a>
-            </h5>
-            <a
-              href="#"
-              class="btn btn-primary btn-add-cart"
-              data-id="bluelock"
-              data-nombre="Blue Lock Vol 1"
-              data-precio="12000">Añadir al carrito
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.tiktok.com/es/" class="nav-link px-2 text-body-secondary">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </li>
+      </ul> 
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
