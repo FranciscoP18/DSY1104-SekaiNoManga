@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { loadMangas } from "../services/mangas";
 import { useCart } from "../context/CartContext";
 import { CLP } from "../utils/currency";
 
 export default function Producto() {
   const { id } = useParams();
-  const nav = useNavigate();
+  // const nav = useNavigate();
   const { dispatch } = useCart();
   const [data, setData] = useState({ list: [], byId: {}, bySerie: {} });
   const [loading, setLoading] = useState(true);

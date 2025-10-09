@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer border-top mt-5 py-4">
-      <div className="container">
+    <footer className="mt-auto py-4">
+      <div className="container text-center text-muted small">
         <div className="row g-3">
           <div className="col-12 col-md-4">
             <strong>Sekai no Manga</strong>

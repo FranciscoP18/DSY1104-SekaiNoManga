@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 /* ====== GRID / CARD ====== */
 .catalog-grid .card{
   height: 100%;
@@ -74,11 +79,14 @@
   white-space: nowrap; overflow: hidden; display: inline-block;
   animation: slide-text 10s linear infinite;
 }
-@keyframes slide-text {
-  0% { transform: translateX(10%);} 50% { transform: translateX(-10%);} 100% { transform: translateX(10%);}
-}
+
 
 /* ====== ESPACIADOS GENERALES ====== */
 main .container { padding-top: 1rem; padding-bottom: 2rem; }
-footer.footer { margin-top: 3rem; }
+footer.footer {
+background-color: rgba(134, 131, 131, 0.418); }
 hr { border-color: #e5e7eb; opacity: 1; }
+
+@keyframes slide-text {
+  0% { transform: translateX(10%);} 50% { transform: translateX(-10%);} 100% { transform: translateX(10%);}
+}
