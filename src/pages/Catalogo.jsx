@@ -15,7 +15,10 @@ export default function Catalogo({ filter }) {
     (async () => {
       try {
         const { list } = await loadMangas();
-        if (ok) setItems(list);
+        if (ok) {
+          const arr = Array.isArray(list) ? list : [];
+          setItems(arr);
+        }
       } catch (e) {
         console.error(e);
       } finally {
@@ -25,29 +28,27 @@ export default function Catalogo({ filter }) {
     return () => { ok = false; };
   }, []);
 
-  const baseList = useMemo(() => {
-    if (filter === "onSale")     return items.filter(p => p.onSale || p.oferta);
-    if (filter === "topSelling") return items.filter(p => p.topSelling || p.masVendido);
-    return items;
-  }, [items, filter]);
-
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
-    if (!term) return baseList;
-    return baseList.filter(p => (p.title || p.titulo || "").toLowerCase().includes(term));
-  }, [baseList, q]);
+    const base = filter ? items.filter(filter) : items;
+    if (!term) return base;
+    return base.filter(p =>
+      (p.titulo || "").toLowerCase().includes(term) ||
+      (p.title || "").toLowerCase().includes(term)
+    );
+  }, [items, q, filter]);
 
-  const handleAdd = (p) =>
-    dispatch({ type: "ADD_ITEM", payload: {
-      id: p.id, title: p.title || p.titulo, price: Number(p.price || p.precio) || 0, image: p.image || p.img, qty: 1
-    }});
+  const handleAdd = (payload) => {
+    // ÚNICO dispatch
+    dispatch({ type: "ADD_ITEM", payload });
+  };
 
   return (
     <section className="py-4">
       <div className="container">
-        <div className="d-flex align-items-center justify-content-between mb-3">
-          <h1 className="h4 mb-0">Catálogo</h1>
-          <small className="text-muted">{filtered.length} resultados</small>
+        <div className="d-flex align-items-center justify-content-between">
+          <h3 className="mb-0">Catálogo</h3>
+          <div className="text-muted small">{filtered.length} resultados</div>
         </div>
 
         <SearchBar value={q} onChange={setQ} />

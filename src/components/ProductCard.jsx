@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
 import { CLP } from "../utils/currency";
 
+// NOTA: Este componente ya NO importa useCart ni hace dispatch.
+// Solo llama onAdd(payload) si viene del padre.
+
 export default function ProductCard({ product, onAdd }) {
-  const { dispatch } = useCart();
   const p = product ?? {};
   const id = p.id;                          // id debe existir en mangas.json
   const title = p.title || p.titulo || "Manga";
@@ -14,26 +15,25 @@ export default function ProductCard({ product, onAdd }) {
 
   const add = () => {
     if (!id) return;
-    dispatch({ type: "ADD_ITEM", payload: { id, title, price, image, qty: 1 } });
-    onAdd?.(p);
+    const payload = { id, title, price, image, qty: 1 };
+    if (onAdd) onAdd(payload);  // Solo delega al padre
   };
 
   return (
     <div className="card h-100">
       {/* Click a portada → detalle */}
-      <Link to={to} className="text-decoration-none">
+      <Link to={to} className="text-decoration-none text-reset">
         <img
           src={image}
           alt={title}
           className="card-img-top"
+          style={{ aspectRatio: "3 / 4", objectFit: "cover" }}
           onError={(e)=>{ e.currentTarget.src="/assets/img/placeholder_cover.png"; }}
-          loading="lazy" decoding="async" referrerPolicy="no-referrer"
         />
       </Link>
 
       <div className="card-body d-flex flex-column">
-        {/* Click al título → detalle */}
-        <Link to={to} className="text-decoration-none text-body">
+        <Link to={to} className="text-decoration-none text-reset">
           <h6 className="card-title">{title}</h6>
         </Link>
 
