@@ -1,0 +1,80 @@
+
+[
+  {
+    "id": "dandadan1",
+    "serie": "DanDaDan",
+    "volumen": 1,
+    "titulo": "DanDaDan Volumen 1",
+    "editorial": "IVREA",
+    "precio": 12000,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/24/67/2467b765276184f142d032247eefd135.jpg",
+    "desc": "Ken Takakura es un fanático de la ufología; pero no cree en fantasmas. Momo Ayase no cree en aliens. Hacen una apuesta... ¡y ambos tenían razón!",
+    "onSale": true,
+    "topSelling": true
+  },
+  {
+    "id": "dandadan2",
+    "serie": "DanDaDan",
+    "volumen": 2,
+    "titulo": "DanDaDan Volumen 2",
+    "editorial": "IVREA",
+    "precio": 12000,
+    "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/53/fe/53fe290ddec10360ae17dacf1d341a14.jpg",
+    "desc": "Secuela directa del Vol. 1 con la dupla en nuevos enredos paranormales.",
+    "onSale": true,
+    "topSelling": true
+  },
+  {
+    "id": "dandadan3",
+    "serie": "DanDaDan",
+    "volumen": 3,
+    "titulo": "DanDaDan Volumen 3",
+    "editorial": "IVREA",
+    "precio": 12000,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/50/5a/505afa5847c3ad9837b0e7a33d57b908.jpg",
+    "desc": "¡Continúa la locura alien/fantasma!"
+  },
+  {
+    "id": "onepiece1",
+    "serie": "One Piece",
+    "volumen": 1,
+    "titulo": "One Piece 01",
+    "editorial": "IVREA",
+    "precio": 14500,
+    "img": "https://images.cdn1.buscalibre.com/fit-in/360x360/71/55/71553b3c259caf6cbb510b7eb001e632.jpg",
+    "desc": "Luffy inicia su aventura para convertirse en el Rey de los Piratas."
+  },
+  {
+    "id": "onepiece2",
+    "serie": "One Piece",
+    "volumen": 2,
+    "titulo": "One Piece 02",
+    "editorial": "IVREA",
+    "precio": 14500,
+    "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/5f/45/5f4562241b6e81aaf5dc0419c22e1058.jpg",
+    "desc": "La tripulación se enfrenta a nuevos retos y enemigos."
+  },
+  {
+    "id": "onepiecesanji",
+    "serie": "One Piece",
+    "volumen": 0,
+    "titulo": "One Piece: Las Recetas de Sanji",
+    "editorial": "IVREA",
+    "precio": 30000,
+    "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/7a/a7/7aa787eee3737e39b6de4a6eee0ffe29.jpg",
+    "desc": "Recetario oficial inspirado en One Piece, por el chef de los Sombrero de Paja."
+  },
+  {
+    "id": "bluelock",
+    "serie": "Blue Lock",
+    "volumen": 1,
+    "titulo": "Blue Lock Vol 1",
+    "editorial": "IVREA",
+    "precio": 12000,
+    "img": "https://cdnx.jumpseller.com/neotokyo3-store/image/20853262/resize/610/610?1647613258",
+    "desc": "Fútbol + battle royale. El proyecto Blue Lock busca al mejor delantero del mundo."
+  
+  }
+]
+
+
