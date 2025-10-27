@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="376" lines-covered="323" line-rate="0.8590000000000001" branches-valid="98" branches-covered="45" branch-rate="0.45909999999999995" timestamp="1761183256960" complexity="0" version="0.1">
+<coverage lines-valid="371" lines-covered="323" line-rate="0.8706" branches-valid="94" branches-covered="45" branch-rate="0.47869999999999996" timestamp="1761571457119" complexity="0" version="0.1">
   <sources>
     <source>C:\Users\souta\Documents\GitHub\DSY1104-SekaiNoManga</source>
   </sources>
@@ -770,7 +770,7 @@
         </class>
       </classes>
     </package>
-    <package name="src.helpers" line-rate="0.7058" branch-rate="0.3">
+    <package name="src.helpers" line-rate="1" branch-rate="0.5">
       <classes>
         <class name="cart.js" filename="src\helpers\cart.js" line-rate="1" branch-rate="0.5">
           <methods>
@@ -822,52 +822,6 @@
             <line number="6" hits="1" branch="false"/>
           </lines>
         </class>
-        <class name="http.js" filename="src\helpers\http.js" line-rate="0" branch-rate="0">
-          <methods>
-            <method name="mockFetchOk" hits="0" signature="()V">
-              <lines>
-                <line number="1" hits="0"/>
-              </lines>
-            </method>
-            <method name="(anonymous_1)" hits="0" signature="()V">
-              <lines>
-                <line number="5" hits="0"/>
-              </lines>
-            </method>
-            <method name="(anonymous_2)" hits="0" signature="()V">
-              <lines>
-                <line number="5" hits="0"/>
-              </lines>
-            </method>
-            <method name="(anonymous_3)" hits="0" signature="()V">
-              <lines>
-                <line number="5" hits="0"/>
-              </lines>
-            </method>
-            <method name="mockFetchError" hits="0" signature="()V">
-              <lines>
-                <line number="9" hits="0"/>
-              </lines>
-            </method>
-            <method name="(anonymous_5)" hits="0" signature="()V">
-              <lines>
-                <line number="11" hits="0"/>
-              </lines>
-            </method>
-            <method name="restoreFetch" hits="0" signature="()V">
-              <lines>
-                <line number="14" hits="0"/>
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="2" hits="0" branch="false"/>
-            <line number="5" hits="0" branch="false"/>
-            <line number="10" hits="0" branch="false"/>
-            <line number="11" hits="0" branch="false"/>
-            <line number="15" hits="0" branch="true" condition-coverage="0% (0/2)"/>
-          </lines>
-        </class>
         <class name="render.js" filename="src\helpers\render.js" line-rate="1" branch-rate="0.5">
           <methods>
             <method name="(anonymous_0)" hits="1" signature="()V">
@@ -891,12 +845,6 @@
             <line number="4" hits="1" branch="false"/>
             <line number="5" hits="1" branch="false"/>
             <line number="6" hits="1" branch="false"/>
-          </lines>
-        </class>
-        <class name="setupTests.js" filename="src\helpers\setupTests.js" line-rate="1" branch-rate="1">
-          <methods>
-          </methods>
-          <lines>
           </lines>
         </class>
       </classes>

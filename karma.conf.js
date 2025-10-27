@@ -4,7 +4,6 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     files: [
-      'src/helpers/setupTests.js',   // puede estar vacío (sin jest-dom)
       'src/**/*.spec.js',
       'src/**/*.spec.jsx',
       'src/**/*.js',
