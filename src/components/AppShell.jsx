@@ -1,4 +1,3 @@
-// AppShell.jsx - Versión FINAL y CORRECTA
 import React from "react";
 import { Outlet } from "react-router-dom";
 import TopBar from "./TopBar.jsx";
@@ -6,7 +5,6 @@ import Footer from "./Footer.jsx";
 
 export default function AppShell() {
   return (
-    // ESTE ÚNICO DIV ENVUELVE TODO EL LAYOUT
     <div className="d-flex flex-column min-vh-100"> 
       
       {/* 1. BANNERS */}

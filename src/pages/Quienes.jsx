@@ -6,7 +6,8 @@ export default function Quienes() {
       <div className="container">
         <h1 className="h4 mb-3">¿Quiénes somos?</h1>
         <p className="text-muted">
-          Somos una tienda ficticia de manga para el curso. Este texto es editable: agrega misión, visión y datos de contacto.
+          Sekai no manga nace con la idea de convertirse en un eje clave para el consumo de manga y novelas ligeras japonesas, trayendo los ultimos lanzamientos 
+          y en futuro convertirse en una editorial que pueda apoyar el talento nacional 
         </p>
       </div>
     </section>

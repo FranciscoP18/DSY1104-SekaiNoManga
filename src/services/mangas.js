@@ -1,4 +1,3 @@
-// src/services/mangas.js
 let cache = null;
 
 export function __clearMangasCacheForTests() { cache = null; }

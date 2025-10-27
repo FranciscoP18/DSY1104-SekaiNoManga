@@ -39,7 +39,6 @@ export default function Catalogo({ filter }) {
   }, [items, q, filter]);
 
   const handleAdd = (payload) => {
-    // ÚNICO dispatch
     dispatch({ type: "ADD_ITEM", payload });
   };
 

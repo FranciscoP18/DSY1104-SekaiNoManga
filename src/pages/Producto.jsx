@@ -6,7 +6,6 @@ import { CLP } from "../utils/currency";
 
 export default function Producto() {
   const { id } = useParams();
-  // const nav = useNavigate();
   const { dispatch } = useCart();
   const [data, setData] = useState({ list: [], byId: {}, bySerie: {} });
   const [loading, setLoading] = useState(true);
