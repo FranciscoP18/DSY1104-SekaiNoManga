@@ -1,12 +1,12 @@
 import React from "react";
 import { screen, fireEvent } from "@testing-library/react";
 import ProductCard from "./ProductCard";
-import { renderWithRouter } from "../helpers/render"; // <-- usa este helper
+import { renderWithRouter } from "../helpers/render"; 
 
 describe("ProductCard", () => {
   it("muestra título y precio normalizados", () => {
     const product = { id: 7, titulo: "Chainsaw Man", precio: 9990, image: "csm.png" };
-    renderWithRouter(<ProductCard product={product} />);  // <-- Router!
+    renderWithRouter(<ProductCard product={product} />); 
     expect(screen.getByText(/Chainsaw Man/)).toBeTruthy();
     expect(screen.getByText(/[\$\d\.,]/)).toBeTruthy();
   });

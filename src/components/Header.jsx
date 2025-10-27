@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 export default function Header() {
   const { pathname } = useLocation();
 
-  // Oculta banners en carro, usuario y producto (puedes agregar más rutas si quieres)
+
   const hideBanners =
     pathname.startsWith("/carro") ||
     pathname.startsWith("/usuario") ||

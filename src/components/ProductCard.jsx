@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { CLP } from "../utils/currency";
 
-// NOTA: Este componente ya NO importa useCart ni hace dispatch.
-// Solo llama onAdd(payload) si viene del padre.
+
 
 export default function ProductCard({ product, onAdd }) {
   const p = product ?? {};
-  const id = p.id;                          // id debe existir en mangas.json
+  const id = p.id;
   const title = p.title || p.titulo || "Manga";
   const price = Number(p.price || p.precio) || 0;
   const image = p.image || p.img || "/assets/img/placeholder_cover.png";
@@ -16,12 +15,12 @@ export default function ProductCard({ product, onAdd }) {
   const add = () => {
     if (!id) return;
     const payload = { id, title, price, image, qty: 1 };
-    if (onAdd) onAdd(payload);  // Solo delega al padre
+    if (onAdd) onAdd(payload); 
   };
 
   return (
     <div className="card h-100">
-      {/* Click a portada → detalle */}
+      
       <Link to={to} className="text-decoration-none text-reset">
         <img
           src={image}
